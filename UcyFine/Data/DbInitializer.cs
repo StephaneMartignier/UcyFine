@@ -32,13 +32,13 @@ namespace UcyFine.Data
 
             var fines = new Fine[]
             {
-                new Fine{ Type = "Excuse en retard", Amount = 5.00m },
-                new Fine{ Type = "Non excusé", Amount = 10.00m },
+                new Fine{ Type = "Excuse en retard", Amount = 5.00f },
+                new Fine{ Type = "Non excusé", Amount = 10.00f },
             };
 
             foreach (Fine f in fines)
             {
-                context.Players.Add(f);
+                context.Fines.Add(f);
             }
             context.SaveChanges();
         }
